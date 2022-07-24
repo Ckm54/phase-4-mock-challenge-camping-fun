@@ -4,7 +4,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :record_not_found_exception
 
   def index
     activities = Activity.all
-    render json: activities
+    render json: activities, status: :ok
   end
 
   def destroy
