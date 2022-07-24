@@ -20,11 +20,9 @@ RSpec.describe "Signups", type: :request do
 
         expect(response.body).to include_json({
           id: a_kind_of(Integer),
-          activity: {
-            name: "Archery",
-            difficulty: 2
-          }
-        })
+          name: "Archery",
+          difficulty: 2
+      })
       end
 
       it 'returns a status code of 201 (created)' do

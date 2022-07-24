@@ -3,7 +3,7 @@ rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_exce
 
   def create
     new_signup = Signup.create!(signup_params)
-    render json: new_signup, status: :created
+    render json: new_signup.activity, status: :created
   end
 
   private
