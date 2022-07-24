@@ -7,7 +7,7 @@ rescue_from ActiveRecord::RecordNotFound, with: :record_not_found_exception
     render json: activities
   end
 
-  def delete
+  def destroy
     activity = Activity.find(params[:id])
     activity.destroy
     render json: {}, status: :ok
